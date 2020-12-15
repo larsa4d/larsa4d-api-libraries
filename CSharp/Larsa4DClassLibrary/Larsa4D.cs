@@ -134,7 +134,7 @@ namespace Larsa4D
         public object[] ResultMemberForceAtStart(int memberID) { return (object[])CallMethod(App, "ForcesAtStartOfMember", new object[] { memberID }); }
         public object[] ResultMemberForceAtEnd(int memberID) { return (object[])CallMethod(App, "ForcesAtEndOfMember", new object[] { memberID }); }
         public object[] ResultMemberForceAtMid(int memberID) { return (object[])CallMethod(App, "ForcesInMidOfMember", new object[] { memberID }); }
-        public object[] ResultMemberForceAtStation(int memberID, int Station) { return (object[])CallMethod(App, "ForcesInMember", new object[] { memberID, Station }); }
+        public object[] ResultMemberForceAtStation(int memberID, int Station) { return (object[])CallMethod(App, "ForcesAtStationAlongMember", new object[] { memberID, Station }); }
         public object[] ResultSpringForce(int springID) { return (object[])CallMethod(App, "ForcesInSpring", new object[] { springID }); }
         public object[] ResultIsolatorForce(int isolatorID) { return (object[])CallMethod(App, "ForcesInIsolator", new object[] { isolatorID }); }
         public object[] ResultCompoundForces(double station) { return (object[])CallMethod(App, "CompoundForces", new object[] { station }); }
