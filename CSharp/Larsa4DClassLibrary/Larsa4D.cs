@@ -127,6 +127,11 @@ namespace Larsa4D
 
         public void RunAnalysis(bool async) { CallMethod(App, "RunAnalysis", new object[] { async }); }
         public void ResultSelectCase(string ResultCaseName) { CallMethod(App, "SelectResultCase", new object[] { ResultCaseName }); }
+        public bool IsSelectedResultCaseSolved()
+        {
+            var activeCase = GetProp(Analysis, "activeCase");
+            return (bool)GetProp(activeCase, "Solved");
+        }
         public object[] ResultJointDisp(int jointID) { return (object[])CallMethod(App, "DisplacementsAtJoint", new object[] { jointID }); }
         public object[] ResultJointReactions(int jointID) { return (object[])CallMethod(App, "ReactionsAtJoint", new object[] { jointID }); }
         public object[] ResultMemberForceGlobalAtStart(int memberID) { return (object[])CallMethod(App, "ForcesAtStartOfMemberGlobal", new object[] { memberID }); }
